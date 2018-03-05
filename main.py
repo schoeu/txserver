@@ -6,6 +6,8 @@ import time
 app = Flask(__name__)
 app.debug = True
 
+port = 8918
+host = '0.0.0.0'
 tmp_dir_name = 'tx_py'
 
 @app.route('/')
@@ -56,4 +58,4 @@ def make_sure_dir(path):
         os.mkdir(path)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=host, port=port)

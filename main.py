@@ -1,10 +1,11 @@
-from flask import Flask, request
 import json
 import os
 import time
+from flask import Flask, request
 
 app = Flask(__name__)
-app.debug = True
+
+#app.debug = True
 
 port = 8918
 host = '0.0.0.0'
@@ -30,7 +31,6 @@ def update():
 
         store_data(url_list)
     return 'test'
-
 
 def store_data(data):
     rs_path = os.path.join(os.getcwd(), tmp_dir_name)

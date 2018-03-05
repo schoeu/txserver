@@ -34,13 +34,10 @@ def update():
 
 def store_data(data):
     rs_path = os.path.join(os.getcwd(), tmp_dir_name)
-    print(rs_path)
 
     # make sure the dir is exist.
     make_sure_dir(rs_path)
     file_path = os.path.join(rs_path, 'url_list_' + time.strftime("%Y%m%d_%H%M%S"))
-
-    print(file_path)
 
     fileObject = open(file_path, 'w')
     rs_list = []

@@ -52,7 +52,12 @@ def store_data(data):
     rs_list = []
     for i in data:
         if i['url'] != '':
-            rs_list.append(i['url'])
+            attrs = []
+            attrs.append(str(i['Level']))
+            attrs.append(i['Range'])
+            attrs.append(i['Reason'])
+            attrs.append(i['url'])
+            rs_list.append('\t'.join(attrs))
     
     fileObject.write('\n'.join(rs_list))
     fileObject.close()
